@@ -16,7 +16,12 @@
 
 //Code here
 
+var me = {
+  name: "Jordan",
+  age: 31,
+}
 
+console.log(me.name);
 
 ////////// PROBLEM 2 //////////
 
@@ -27,6 +32,14 @@
 
 //Code here
 
+var favoriteThings = {
+  band: 'btbam',
+  food: 'pizza',
+  person: 'kenna',
+  book: 'wrinkle in time',
+  movie: 'forrest gump',
+  holiday: 'thanksgiving',
+}
 
 
 /*
@@ -35,7 +48,8 @@
 
 //Code here
 
-
+favoriteThings.car = 'porshe';
+favoriteThings.brand = 'nike';
 
 /*
   Now change the value of the food key in your favoriteThings object to be 'Chicken Nuggets' and change the value of the book key in your favoriteThings object to be 'Harry Potter'.
@@ -43,7 +57,8 @@
 
 //Code here
 
-
+favoriteThings.food = 'Chicken Nuggets';
+favoriteThings.book = 'Harry Potter';
 
 ////////// PROBLEM 3 //////////
 
@@ -57,7 +72,13 @@
 
 //Code here
 
+backPack = {
 
+};
+
+var item = 'firstPocket';
+backPack[item] = 'firstPocket';
+backPack['firstPocket'] = 'chapstick';
 
 /*
   After you do the above, alert your entire backPack object.
@@ -65,7 +86,7 @@
 
 //Code here
 
-
+//alert(backPack)
 
 /*
 You probably noticed that it just alerted [object Object].
@@ -75,7 +96,7 @@ Instead, console.log your whole backPack object and then check out the console.
 
 //Code here
 
-
+//console.log(backPack)
 
 ////////// PROBLEM 4 //////////
 
@@ -98,7 +119,8 @@ var user2 = {
 
 //Code Here
 
-
+user2.name = 'Tyler S. McGinnis';
+user2.email = 'tyler.mcginnis@devmounta.in';
 
 ////////// EXTRA PRACTICE PROBLEMS BELOW //////////
 
@@ -110,7 +132,9 @@ var user2 = {
 
 //Code Here
 
+methodCollection = {
 
+};
 
 /*
   Now add two methods (functions that are properties on objects) to your methodCollection object. 
@@ -119,7 +143,14 @@ var user2 = {
 
 //Code Here
 
-
+methodCollection = {
+  alertHello: function() {
+    alert('hello');
+  },
+  logHello: function() {
+    console.log('hello');
+  }
+};
 
 /*
   Now call your alertHello and logHello methods.
@@ -138,7 +169,11 @@ var user2 = {
 
 //Code Here
 
-
+function makePerson (name, birthday, ssn) {
+  return {
+    name, birthday, ssn
+  }
+};
 
 ////////// PROBLEM 7 //////////
 
@@ -149,4 +184,9 @@ var user2 = {
 
 //Code Here
 
-
+function makeCard (cardNumber, expirationDate, securityCode) {
+  return {
+    cardNumber, expirationDate, securityCode
+  }
+};
+makeCard(cardNumber, expirationDate, securityCode)
