@@ -16,12 +16,12 @@
 
 //Code here
 
-var me = {
-  name: "Jordan",
-  age: 31,
-}
+let me = {
+  name: 'Jordan Price',
+  age: 31
+};
 
-console.log(me.name);
+alert(me.name);
 
 ////////// PROBLEM 2 //////////
 
@@ -32,15 +32,14 @@ console.log(me.name);
 
 //Code here
 
-var favoriteThings = {
-  band: 'btbam',
-  food: 'pizza',
-  person: 'kenna',
-  book: 'wrinkle in time',
-  movie: 'forrest gump',
-  holiday: 'thanksgiving',
-}
-
+let favoriteThings = {
+  band: 'BTBAM',
+  food: 'Ramen',
+  person: 'Kenna',
+  book: 'The Book of Basketball',
+  movie: 'Forrest Gump',
+  holiday: 'Thanksgiving'
+};
 
 /*
   After you've made your object, add another key named 'car' with the value being your favorite car and then another key named 'brand' with the value being your favorite brand.
@@ -48,8 +47,8 @@ var favoriteThings = {
 
 //Code here
 
-favoriteThings.car = 'porshe';
-favoriteThings.brand = 'nike';
+favoriteThings.car = 'Porshe 911';
+favoriteThings.brand = 'Nike';
 
 /*
   Now change the value of the food key in your favoriteThings object to be 'Chicken Nuggets' and change the value of the book key in your favoriteThings object to be 'Harry Potter'.
@@ -72,13 +71,10 @@ favoriteThings.book = 'Harry Potter';
 
 //Code here
 
-backPack = {
-
-};
-
-var item = 'firstPocket';
-backPack[item] = 'firstPocket';
-backPack['firstPocket'] = 'chapstick';
+let backPack = {};
+let item = 'firstPocket';
+ backPack[item] = 'chapstick';
+ backPack.color = 'blue';
 
 /*
   After you do the above, alert your entire backPack object.
@@ -86,7 +82,7 @@ backPack['firstPocket'] = 'chapstick';
 
 //Code here
 
-//alert(backPack)
+alert(backPack);
 
 /*
 You probably noticed that it just alerted [object Object].
@@ -96,7 +92,7 @@ Instead, console.log your whole backPack object and then check out the console.
 
 //Code here
 
-//console.log(backPack)
+console.log(backPack);
 
 ////////// PROBLEM 4 //////////
 
@@ -119,8 +115,15 @@ var user2 = {
 
 //Code Here
 
-user2.name = 'Tyler S. McGinnis';
-user2.email = 'tyler.mcginnis@devmounta.in';
+function editUser(newName, newEmail, user){
+  user.name = newName;
+  user.email = newEmail;
+  return user;
+};
+
+editUser('Tyler S. McGinnis', 'tyler.mcginnis@devmounta.in', user2);
+
+console.log(user2);
 
 ////////// EXTRA PRACTICE PROBLEMS BELOW //////////
 
@@ -132,9 +135,7 @@ user2.email = 'tyler.mcginnis@devmounta.in';
 
 //Code Here
 
-methodCollection = {
-
-};
+let methodCollection = {};
 
 /*
   Now add two methods (functions that are properties on objects) to your methodCollection object. 
@@ -143,13 +144,11 @@ methodCollection = {
 
 //Code Here
 
-methodCollection = {
-  alertHello: function() {
-    alert('hello');
-  },
-  logHello: function() {
-    console.log('hello');
-  }
+methodCollection.alertHello = function(){
+  alert('hello');
+};
+methodCollection.logHello = function(){
+  console.log('hello');
 };
 
 /*
@@ -158,7 +157,8 @@ methodCollection = {
 
 //Code Here
 
-
+methodCollection.alertHello();
+methodCollection.logHello();
 
 ////////// PROBLEM 6 //////////
 
@@ -169,10 +169,8 @@ methodCollection = {
 
 //Code Here
 
-function makePerson (name, birthday, ssn) {
-  return {
-    name, birthday, ssn
-  }
+function makePerson(name, birthday, ssn){
+  return {name, birthday, ssn};
 };
 
 ////////// PROBLEM 7 //////////
@@ -184,9 +182,6 @@ function makePerson (name, birthday, ssn) {
 
 //Code Here
 
-function makeCard (cardNumber, expirationDate, securityCode) {
-  return {
-    cardNumber, expirationDate, securityCode
-  }
+function makeCard(cardNumber, expirationDate, securityCode){
+  return {cardNumber, expirationDate, securityCode};
 };
-makeCard(cardNumber, expirationDate, securityCode)
